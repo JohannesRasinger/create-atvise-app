@@ -68,7 +68,8 @@ export function getTypeDefinition(path: string) {
   const match = typeDefinifions.get(extension);
 
   if (!match) {
-    throw new Error(`No type definition for extension '${extension}'`);
+    //use as default, like the atvise builder, for fonts etc
+    return 'VariableTypes.ATVISE.Resource.OctetStream';
   }
 
   return match;
@@ -96,13 +97,6 @@ export async function deployFile(
   if (!createdNode) {
     debug(`'${nodeId}' already exists, overwriting...`);
     await atscmApi.writeNode(nodeId, value);
-  }
-
-  if (typeDefinition === ResourceType.Svg) {
-    warn(`Attention: There are SVGs in your build output.
-
-Please remove the reference from '${nodeId}' to '${ResourceType.Svg}.Translate' in atvise builder.
-See https://github.com/atvise/create-atvise-app/issues/14`);
   }
 
   debug(`Deployed '${nodeId}'`);
