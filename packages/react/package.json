@@ -5,12 +5,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/atvise/create-atvise-app.git",
+    "url": "git+https://github.com/JohannesRasinger/create-atvise-app.git",
     "directory": "packages/react"
   },
   "author": "Lukas Hechenberger <npm@ls-age.com>",
   "bugs": {
-    "url": "https://github.com/atvise/create-atvise-app/issues"
+    "url": "https://github.com/JohannesRasinger/create-atvise-app/issues"
   },
   "main": "out/index.js",
   "module": "out/index.mjs",
@@ -20,8 +20,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "peerDependencies": {
-    "react": "^16.13.1 || ^17.0.1 || ^18.01",
-    "react-dom": "^16.13.1 || ^17.0.1 || ^18.01"
+    "react": "^16.13.1 || ^17.0.1 || ^18.0.1",
+    "react-dom": "^16.13.1 || ^17.0.1 || ^18.0.1"
   },
   "dependencies": {
     "@atvise/modular-webmi": "workspace:*"
